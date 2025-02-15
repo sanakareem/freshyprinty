@@ -1,0 +1,48 @@
+{
+  "SHIRT002-L": {
+    "code": "SHIRT002",
+    "size": "L"
+  },
+  "PANTS001-M": {
+    "code": "PANTS001",
+    "size": "M"
+  },
+  "JACKET001-XL": {
+    "code": "JACKET001",
+    "size": "XL"
+  },
+  "SHOES001-42": {
+    "code": "SHOES001",
+    "size": "42",
+    "quality": 12,
+    "price": 59.99
+  },
+  "HAT001-FREE": {
+    "code": "HAT001",
+    "size": "FREE",
+    "quality": 25,
+    "price": 19.99
+  },
+  "HAT001-FREE-FREE": {
+    "code": "HAT001-FREE",
+    "size": "FREE",
+    "quality": 10,
+    "price": 25.99
+  },
+  "SHOES001-42-42": {
+    "code": "SHOES001-42",
+    "size": "42"
+  },
+  "SHIRT001-M": {
+    "code": "SHIRT001",
+    "size": "M",
+    "quality": 20,
+    "price": 39.99
+  },
+  "PANT001-L": {
+    "code": "PANT001",
+    "size": "L",
+    "quality": 10,
+    "price": 59.99
+  }
+}

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./github-search-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./apparel-inventory-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apparel-inventory-api/src/data:/app/src/data

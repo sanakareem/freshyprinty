@@ -1,0 +1,145 @@
+# FreshPrints Assessment
+
+A full-stack web application that combines GitHub user search functionality and apparel inventory management. Built with Angular and Node.js.
+
+## Overview
+
+The application consists of two main components:
+- A frontend service for GitHub user searching with history tracking
+- A backend service for managing apparel inventory and order fulfillment
+
+## Prerequisites
+
+- Node.js (v18.x or higher)
+- npm (v9.x or higher)
+- Angular CLI (v19.1.0)
+
+## Installation & Setup
+
+Clone the repository:
+git clone https://github.com/sanakareem/freshyprinty.git
+cd freshyprinty
+cd assessment
+
+Backend Setup:
+
+Navigate to backend directory
+cd apparel-inventory-api
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+Frontend Setup:
+
+Navigate to frontend directory
+cd github-search-frontend
+
+# Install dependencies
+npm install
+
+# Start development server
+ng serve
+Usage
+Frontend Application (http://localhost:4200)
+The frontend application provides:
+
+GitHub user search functionality
+Search history tracking
+Responsive design with clean UI
+Navigation between search and history views
+
+Backend API (http://localhost:3000)
+The backend service supports:
+
+Single Item Update
+
+http example: (http://localhost:3000/api/apparel/SHOES001-42\42)
+
+PUT /api/apparel/:code/:size 
+{
+  "quality": number,
+  "price": number
+}
+
+Order Fulfillment Check
+
+http example(http://localhost:3000/api/apparel/SHOES001-42\42)
+
+POST /api/apparel/check-fulfillment 
+{
+  "items": [
+    {
+      "code": string,
+      "size": string,
+      "quantity": number
+    }
+  ]
+}
+
+Application Structure
+Copyfreshyprinty/
+├── github-search-frontend/    # Angular frontend application
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── components/
+│   │   │   ├── services/
+│   │   │   └── models/
+│   │   └── assets/
+│   └── package.json
+│
+└── apparel-inventory-api/     # Node.js backend application
+    ├── src/
+    │   ├── controllers/
+    │   ├── data/
+    │   ├── models/
+    │   ├── routes/
+    │   ├── services/
+    │   ├── utils/          # New directory for utility functions
+    └── package.json
+
+
+Features
+GitHub User Search
+
+Real-time GitHub user search
+Persistent search history using local storage
+Clean and intuitive user interface
+Response caching for improved performance
+
+Apparel Inventory Management
+
+Inventory tracking with quality and price management
+Order fulfillment verification
+Cost calculation functionality
+JSON-based data persistence
+
+Local Development
+Running Tests
+bashCopy# Backend tests
+cd apparel-inventory-api
+npm test
+
+# Frontend tests
+cd github-search-frontend
+ng test
+Environment Variables
+The application uses the following environment variables:
+
+PORT: Backend server port (default: 3000)
+NODE_ENV: Environment mode (development/production)
+
+Contributing
+
+Fork the repository
+Create your feature branch (git checkout -b feature/amazing-feature)
+Commit your changes (git commit -m 'Add some amazing feature')
+Push to the branch (git push origin feature/amazing-feature)
+Open a Pull Request
+
+
+Special thanks to FreshPrints for the opportunity
+Built using Angular and Node.js
+Implements GitHub API integration
